@@ -1,0 +1,23 @@
+C:\Users\11376860\Documents\Visual Studio 2012\Projects\Ass1\Ass1\bin\Debug\Ass1.exe.config
+C:\Users\11376860\Documents\Visual Studio 2012\Projects\Ass1\Ass1\bin\Debug\Ass1.exe
+C:\Users\11376860\Documents\Visual Studio 2012\Projects\Ass1\Ass1\bin\Debug\Ass1.pdb
+C:\Users\11376860\Documents\Visual Studio 2012\Projects\Ass1\Ass1\obj\Debug\Ass1.exe
+C:\Users\11376860\Documents\Visual Studio 2012\Projects\Ass1\Ass1\obj\Debug\Ass1.pdb
+H:\Ass1\Ass1\bin\Debug\Ass1.exe.config
+H:\Ass1\Ass1\obj\Debug\Ass1.exe
+H:\Ass1\Ass1\obj\Debug\Ass1.pdb
+H:\Ass1\Ass1\bin\Debug\Ass1.exe
+H:\Ass1\Ass1\bin\Debug\Ass1.pdb
+H:\Ass1\Ass1\obj\Debug\Ass1.csprojResolveAssemblyReference.cache
+C:\Users\11376860\Desktop\Ass1\Ass1\bin\Debug\Ass1.exe.config
+C:\Users\11376860\Desktop\Ass1\Ass1\obj\Debug\Ass1.exe
+C:\Users\11376860\Desktop\Ass1\Ass1\obj\Debug\Ass1.pdb
+C:\Users\11376860\Desktop\Ass1\Ass1\bin\Debug\Ass1.exe
+C:\Users\11376860\Desktop\Ass1\Ass1\bin\Debug\Ass1.pdb
+C:\Users\11376860\Desktop\Ass1\Ass1\obj\Debug\Ass1.csprojResolveAssemblyReference.cache
+C:\Users\Guangbo\Desktop\net\Ass1\bin\Debug\Ass1.exe.config
+C:\Users\Guangbo\Desktop\net\Ass1\obj\Debug\Ass1.exe
+C:\Users\Guangbo\Desktop\net\Ass1\obj\Debug\Ass1.pdb
+C:\Users\Guangbo\Desktop\net\Ass1\bin\Debug\Ass1.exe
+C:\Users\Guangbo\Desktop\net\Ass1\bin\Debug\Ass1.pdb
+C:\Users\Guangbo\Desktop\net\Ass1\obj\Debug\Ass1.csprojResolveAssemblyReference.cache
