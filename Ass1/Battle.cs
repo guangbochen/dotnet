@@ -15,17 +15,18 @@ namespace Ass1
     //        MaxheavyDama = 68, MinheavyDama = 40,
     //    };
 
-    //    public Battle(Fleet firstFleet, Fleet secondFleet, Generator generator)
-    //    {
-    //        if (firstFleet.FileIsFine == true
-    //            && secondFleet.FileIsFine == true)
-    //        {
-    //            //calls the startBattle method to start battle
-    //            Console.WriteLine("");
-    //            StartBattle(firstFleet, secondFleet, generator);
-    //            Console.WriteLine("");
-    //        }
-    //    }
+        public Battle(Fleet fleet1, Fleet fleet2)
+        {
+            //calls the startBattle method to start battle
+            //StartBattle(firstFleet, secondFleet, generator);
+            Console.WriteLine(fleet1.NumberOfShips);
+            Console.WriteLine(fleet2.NumberOfShips);
+            Console.WriteLine(fleet1.Ships.Length);
+            foreach (Ship s in fleet1.Ships)
+            {
+                Console.WriteLine(s.Name);
+            }
+        }
 
     //    /**
     //     * this method starts the battle

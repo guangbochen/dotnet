@@ -6,19 +6,26 @@ namespace Ass1
 {
     class Program
     {
-
         static void Main(string[] args)
         {
 
-            Fleet fleet1 = null;
-            Fleet fleet2 = null;
+            Random rand = null;
             Console.WriteLine("TrekBattle by Guangbo Chen");
 
             try
             {
-                ValidateInput(args, out fleet1, out fleet2);
+                //validate command line input
+                ValidateInput(args, out rand);
+
+                //load first file and create fleet1
+                Fleet fleet1 = new Fleet(args[1]);
+
+                //load second file and create fleet2
+                Fleet fleet2 = new Fleet(args[2]);
+
                 //if load the file successfully, start the battle
-                //Battle battle = new Battle(firstFleet, secondFleet, generator);
+                Battle battle = new Battle(fleet1, fleet2);
+
             }
             catch (Exception e)
             {
@@ -28,7 +35,7 @@ namespace Ass1
 
         }
 
-        static void ValidateInput(String[] args, out Fleet fleet1, out Fleet fleet2)
+        static void ValidateInput(String[] args, out Random rand)
         {
             //validate the length of input command line
             if (args.Length != 3) 
@@ -41,13 +48,7 @@ namespace Ass1
                 throw new Exception("Invalid seed value entered");
 
             //create the random number generator
-            Random rand = new Random(seed);
-
-            //load first file and create fleet1
-            fleet1 = new Fleet(args[1], rand);
-
-            //load second file and create fleet2
-            fleet2 = new Fleet(args[1], rand);
+            rand = new Random(seed);
         }
 
     }
