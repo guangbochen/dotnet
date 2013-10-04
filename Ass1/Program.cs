@@ -9,18 +9,6 @@ namespace Ass1
 
         static void Main(string[] args)
         {
-            //if(Program.ValidateInput(args) == true)
-            //{
-            //    //if the input argument is fine, load the file
-            //    Generator generator = new Generator(seed);
-            //    Fleet firstFleet = new Fleet(args[firstFile]);
-            //    if (firstFleet.FileIsFine == true)
-            //    {
-            //        Fleet secondFleet = new Fleet(args[secondFile]);
-            //        //if load the file successfully, start the battle
-            //        Battle battle = new Battle(firstFleet, secondFleet, generator);
-            //     }
-            //}
 
             Fleet fleet1 = null;
             Fleet fleet2 = null;
@@ -29,6 +17,8 @@ namespace Ass1
             try
             {
                 ValidateInput(args, out fleet1, out fleet2);
+                //if load the file successfully, start the battle
+                //Battle battle = new Battle(firstFleet, secondFleet, generator);
             }
             catch (Exception e)
             {
