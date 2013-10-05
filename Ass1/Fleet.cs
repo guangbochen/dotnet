@@ -5,7 +5,7 @@ namespace Ass1
 {
     public class Fleet
     {
-        //private Boolean lostTheBattle;
+        private Boolean lostTheBattle;
         private string fleetName;
         private Ship[] ships;
         private int numberOfShips;
@@ -16,18 +16,22 @@ namespace Ass1
             get { return numberOfShips; }
         }
 
+        public string FleetName
+        {
+            get { return fleetName; }
+        }
+
         public Ship[] Ships
         {
             get { return ships; }
         }
 
+
         public Fleet(string fleetFile)
         {
             initFleet(fleetFile);
-
             //validate the file is exist
             validateFile(fleetFile);
-
             //if file is exist load fleet and ships from the file
             loadFleet(fleetFile);
         }
@@ -53,6 +57,7 @@ namespace Ass1
             ships = null;
             numberOfShips = 0;
             line = "";
+            lostTheBattle = false;
         }
 
         /**
@@ -137,5 +142,21 @@ namespace Ass1
                 if (line.Length > 0) throw new Exception("More ships than stated");
             }
         }
+
+        /**
+         * methods for game battle
+         **/
+        public Boolean lostTheBattel() 
+        {
+            if(numberOfShips == 0 || ships.Length == 0)
+                lostTheBattle = true;
+            return lostTheBattle;
+        }
+
+        public void removeDestroyedShips(Ship[] newShips)
+        {
+            ships = newShips;
+        }
+
     }
 }

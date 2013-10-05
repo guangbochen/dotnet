@@ -7,8 +7,6 @@ namespace Ass1
 {
     public class Ship
     {
-        private const int badValue = -9999;
-
         private string name;
         private int shieldStrength;
         private int rate;
@@ -19,6 +17,14 @@ namespace Ass1
         private int maxHullStrength;
         private Boolean isTarget;
         private string line;
+        private enum HullDamagePercent
+        {
+            VERY_HEAVY_DAMAGE = 0,
+            HEAVY_DAMAGE = 40,
+            MODERATE_DAMAGE = 70,
+            LIGHT_DAMAGE = 90,
+            UNDAMAGED = 100
+        }
 
         private void initShip()
         {
@@ -38,44 +44,9 @@ namespace Ass1
             get { return name; }
         }
 
-        public int ShieldStrength
-        {
-            get { return shieldStrength; }
-        }
-
-        public int RegenerationRate
-        {
-            get { return rate; }
-        }
-
         public int HullStrength
         {
             get { return hullStrength; }
-        }
-
-        public int BaseDamage
-        {
-            get { return baseDamage; }
-        }
-
-        public int RandomDamage
-        {
-            get { return randomDamage; }
-        }
-
-        public int MaxShieldStrength
-        {
-            get { return maxShieldStrength; }
-        }
-
-        public int MaxHullStrength
-        {
-            get { return maxHullStrength; }
-        }
-
-        public Boolean IsTarget
-        {
-            get { return isTarget; }
         }
 
         public void loadShip(StreamReader fin)
@@ -148,5 +119,56 @@ namespace Ass1
             return rDamage;
         }
 
+        public void setIsTarget(Boolean value)
+        {
+            isTarget = value;
+        }
+
+        public void takeDamage(int damage)
+        {
+            int damageRemain = damage - shieldStrength;
+            isTarget = true;
+            if (damageRemain > 0)
+            {
+                //apply remaining damage to hullStrength
+                hullStrength -= damageRemain;
+                shieldStrength = 0;
+            }
+            else
+            {
+                shieldStrength -= damage;
+            }
+        }
+
+        public int getDamage(Random rand)
+        {
+            int damage = 0;
+            damage = baseDamage + rand.Next(randomDamage);
+            return damage;
+        }
+
+        public void regenerateShield()
+        {
+            //if the ship is not destroyed and is not target in this round
+            //regenerate their shieldStrength
+            if (isTarget == false)
+            {
+                shieldStrength += rate;
+                if (shieldStrength > maxShieldStrength)
+                    shieldStrength = maxShieldStrength;
+            }
+        }
+
+
+        public string getDamageRating()
+        {
+            int undamagedPercent = (hullStrength) * 100 / maxHullStrength;
+
+            if (undamagedPercent == (int)HullDamagePercent.UNDAMAGED) return "undamaged";
+            if (undamagedPercent >= (int)HullDamagePercent.LIGHT_DAMAGE) return "lightly damaged";
+            if (undamagedPercent >= (int)HullDamagePercent.MODERATE_DAMAGE) return "moderately damaged";
+            if (undamagedPercent >= (int)HullDamagePercent.HEAVY_DAMAGE) return "heavily damaged";
+            return "very heavily damaged";
+        }
     }
 }
