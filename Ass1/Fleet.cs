@@ -88,7 +88,6 @@ namespace Ass1
             {
                 fin.Close();
             }
-
         }
 
         /**
@@ -100,7 +99,6 @@ namespace Ass1
             fleetName = fin.ReadLine();
             if (fleetName == null || fleetName.Length == 0)
                 throw new Exception("Missing fleet name");
-
         }
 
         /**
@@ -126,7 +124,6 @@ namespace Ass1
                 ships[i] = new Ship();
                 ships[i].loadShip(fin);
             }
-
         }
 
         /**

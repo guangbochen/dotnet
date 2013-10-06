@@ -86,7 +86,8 @@ namespace Ass1
                 {
                     if (shipLost == false)
                     {
-                        Console.WriteLine("\nAfter round " + round + " the " + fleet.FleetName + " fleet has lost");
+                        Console.WriteLine("\nAfter round " + round + " the " 
+                            + fleet.FleetName + " fleet has lost");
                         shipLost = true;
                     }
                     Console.WriteLine("  " + ship.Name + " destroyed");

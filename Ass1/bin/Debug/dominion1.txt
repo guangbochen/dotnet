@@ -1,0 +1,195 @@
+Dominion
+32
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Attack Ship
+50
+1
+8
+6
+3
+Battle Cruiser
+90
+2
+25
+13
+5
+Battle Cruiser
+90
+2
+25
+13
+5
+Battle Cruiser
+90
+2
+25
+13
+5
+Battle Cruiser
+90
+2
+25
+13
+5
+Battle Cruiser
+90
+2
+25
+13
+5
+Battle Cruiser
+90
+2
+25
+13
+5
+Battle Cruiser
+90
+2
+25
+13
+5
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+Galor
+80
+1
+7
+8
+3
+
