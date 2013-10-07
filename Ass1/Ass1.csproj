@@ -41,12 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Akira.cs" />
+    <Compile Include="AttackShip.cs" />
     <Compile Include="BaseShip.cs" />
     <Compile Include="Battle.cs" />
+    <Compile Include="BattleCruiser.cs" />
+    <Compile Include="BirdOfPrey.cs" />
+    <Compile Include="Defiant.cs" />
     <Compile Include="Fleet.cs" />
+    <Compile Include="Galaxy.cs" />
+    <Compile Include="Galor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ship.cs" />
+    <Compile Include="Vorcha.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

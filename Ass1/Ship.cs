@@ -139,8 +139,7 @@ namespace Ass1
 
         public void regenerateShield()
         {
-            //if the ship is not destroyed and is not target in this round
-            //regenerate their shieldStrength
+            //regenerate the shieldStrength if it is not targeted in that round
             if (isTarget == false)
             {
                 shieldStrength += rate;
@@ -154,10 +153,14 @@ namespace Ass1
         {
             int undamagedPercent = (hullStrength) * 100 / maxHullStrength;
 
-            if (undamagedPercent == (int)HullDamagePercent.UNDAMAGED) return "undamaged";
-            if (undamagedPercent >= (int)HullDamagePercent.LIGHT_DAMAGE) return "lightly damaged";
-            if (undamagedPercent >= (int)HullDamagePercent.MODERATE_DAMAGE) return "moderately damaged";
-            if (undamagedPercent >= (int)HullDamagePercent.HEAVY_DAMAGE) return "heavily damaged";
+            if (undamagedPercent == (int)HullDamagePercent.UNDAMAGED) 
+                return "undamaged";
+            if (undamagedPercent >= (int)HullDamagePercent.LIGHT_DAMAGE) 
+                return "lightly damaged";
+            if (undamagedPercent >= (int)HullDamagePercent.MODERATE_DAMAGE) 
+                return "moderately damaged";
+            if (undamagedPercent >= (int)HullDamagePercent.HEAVY_DAMAGE) 
+                return "heavily damaged";
             return "very heavily damaged";
         }
     }

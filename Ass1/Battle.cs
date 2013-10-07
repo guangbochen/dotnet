@@ -34,7 +34,7 @@ namespace Ass1
         }
 
         /**
-         * this method start a round of battle and fires its weapon
+         * this method start a round of battle and attacker fires its weapon
          **/
         private void startBattle(Fleet attacker, Fleet targetFleet, Random rand)
         {
@@ -42,9 +42,6 @@ namespace Ass1
 
             foreach (Ship ship in attacker.Ships)
             {
-                //if fleet losts all his ships the battle ends
-                if (targetShips.Length == 0) break;
-
                 //get generated damage from attacker
                 int damage = ship.getDamage(rand);
 
