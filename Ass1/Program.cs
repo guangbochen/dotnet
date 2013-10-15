@@ -6,7 +6,7 @@ namespace Ass1
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             Random rand = null;
@@ -21,10 +21,10 @@ namespace Ass1
                 Fleet fleet1 = new Fleet(args[1]);
 
                 //load second file from file 2
-                //Fleet fleet2 = new Fleet(args[2]);
+                Fleet fleet2 = new Fleet(args[2]);
 
                 //if load the file successfully, start the battle
-                //Battle battle = new Battle(fleet1, fleet2, rand);
+                Battle battle = new Battle(fleet1, fleet2, rand);
 
             }
             catch (Exception e)
@@ -35,7 +35,7 @@ namespace Ass1
 
         }
 
-        static void ValidateInput(String[] args, out Random rand)
+        private static void ValidateInput(String[] args, out Random rand)
         {
             //validate the length of input command line
             if (args.Length != 3) 

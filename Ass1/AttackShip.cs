@@ -6,23 +6,40 @@ using System.Threading.Tasks;
 
 namespace Ass1
 {
-    class AttackShip: BaseShip
+    public class AttackShip : BaseShip
     {
         private string name;
-        private int shieldStrength;
+        private Shield shieldStrength;
         private int rate;
-        private int hullStrength;
-        private int baseDamage;
-        private int randomDamage;
+        private Hull hullStrength;
+        private Damage damage;
 
         public AttackShip()
         {
             name = "Attack Ship";
-            shieldStrength = 50;
             rate = 1;
-            hullStrength = 8;
-            baseDamage = 6;
-            randomDamage = 3;
+            shieldStrength = new Shield();
+            hullStrength = new Hull();
+            damage = new Damage();
+
+            //initialize variables
+            shieldStrength.init(50);
+            hullStrength.init(8);
+            damage.init(6, 3);
+        }
+        public override Damage Damage
+        {
+            get { return damage; }
+        }
+
+        public override Hull Hull
+        {
+            get { return hullStrength; }
+        }
+
+        public override Shield Shield
+        {
+            get { return shieldStrength; }
         }
 
         public override string Name
@@ -30,29 +47,9 @@ namespace Ass1
             get { return name; }
         }
 
-        public override int ShieldStrength
-        {
-            get { return shieldStrength; }
-        }
-
         public override int Rate
         {
             get { return rate; }
-        }
-
-        public override int HullStrength
-        {
-            get { return hullStrength; }
-        }
-
-        public override int BaseDamage
-        {
-            get { return baseDamage; }
-        }
-
-        public override int RandomDamage
-        {
-            get { return randomDamage; }
         }
     }
 }

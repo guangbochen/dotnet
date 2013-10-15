@@ -1,0 +1,5 @@
+C:\Users\Guangbo\Desktop\net\Ass1\bin\Release\Ass1.exe.config
+C:\Users\Guangbo\Desktop\net\Ass1\bin\Release\Ass1.exe
+C:\Users\Guangbo\Desktop\net\Ass1\bin\Release\Ass1.pdb
+C:\Users\Guangbo\Desktop\net\Ass1\obj\Release\Ass1.exe
+C:\Users\Guangbo\Desktop\net\Ass1\obj\Release\Ass1.pdb
