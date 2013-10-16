@@ -20,16 +20,6 @@ namespace Ass1
             damageRemain = 0;
         }
 
-        public int Shields
-        {
-            get { return shieldStrength; }
-        }
-
-        public int MaxShields
-        {
-            get { return maxShieldStrength; }
-        }
-
         public void init(int shield)
         {
             shieldStrength = maxShieldStrength = shield;

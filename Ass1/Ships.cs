@@ -22,7 +22,6 @@ namespace Ass1
             get { return shipList; }
         }
 
-
         public int loadNewVersionShips(StreamReader fin)
         {
             int totalCount = 0;;
@@ -45,18 +44,18 @@ namespace Ass1
 
         private void addShipsToList(string shipName, int count)
         {
-            BaseShip bship = null;
-            if (shipName.Equals("Defiant")) bship = new Defiant();
-            else if (shipName.Equals("Akira")) bship = new Akira();
-            else if (shipName.Equals("Galaxy")) bship = new Galaxy();
-            else if (shipName.Equals("Bird of Prey")) bship = new BirdOfPrey();
-            else if (shipName.Equals("Vor'cha")) bship = new Vorcha();
-            else if (shipName.Equals("Attack Ship")) bship = new AttackShip();
-            else if (shipName.Equals("Battle Cruiser")) bship = new BattleCruiser();
-            else if (shipName.Equals("Galor")) bship = new Galor();
-            else throw new Exception(shipName + " is not a valid ship name");
             for (int i = 0; i < count; i++)
             {
+                BaseShip bship = null;
+                if (shipName.Equals("Defiant")) bship = new Defiant();
+                else if (shipName.Equals("Akira")) bship = new Akira();
+                else if (shipName.Equals("Galaxy")) bship = new Galaxy();
+                else if (shipName.Equals("Bird of Prey")) bship = new BirdOfPrey();
+                else if (shipName.Equals("Vor'cha")) bship = new Vorcha();
+                else if (shipName.Equals("Attack Ship")) bship = new AttackShip();
+                else if (shipName.Equals("Battle Cruiser")) bship = new BattleCruiser();
+                else if (shipName.Equals("Galor")) bship = new Galor();
+                else throw new Exception(shipName + " is not a valid ship name");
                 shipList.Add(bship);
             }
         }

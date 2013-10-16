@@ -25,11 +25,6 @@ namespace Ass1
             get { return hullStrength; }
         }
 
-        public int MaxHullStrength
-        {
-            get { return maxHullStrength; }
-        }
-
         public void init(int hull)
         {
             hullStrength = maxHullStrength = hull;

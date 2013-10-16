@@ -15,7 +15,7 @@ namespace Ass1
                 round++;
 
                 //reset each ships as not target in each new round 
-                //fleet1.fireWeapon(fleet2, rand);
+                fleet1.fireWeapon(fleet2, rand);
                 fleet2.fireWeapon(fleet1, rand);
 
                 //remove the destroyed ships

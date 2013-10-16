@@ -29,7 +29,7 @@ namespace Ass1
 
         public Fleet(string fleetFile)
         {
-            initFleet(fleetFile);
+            initFleet();
 
             //validate the file is exist
             validateFile(fleetFile);
@@ -37,12 +37,6 @@ namespace Ass1
             //read the file version and load ships for the fleet
             if (!isNewFileVersion(fleetFile))
                 readAsOldVersion(fleetFile);
-
-            //Console.WriteLine(ships.ShipList.Count);
-            //foreach (BaseShip ship in ships.ShipList)
-            //    Console.WriteLine(fleetName + ship.Name + "ss " + ship.Shield.Shields + " rate " +
-            //        ship.Rate + "hs" +
-            //        ship.Hull.HullStrength + ship.Damage.toString());
         }
 
         /**
@@ -89,14 +83,13 @@ namespace Ass1
         /**
          * this method initialize the fleet object
          **/
-        private void initFleet(string fleetFile)
+        private void initFleet()
         {
             fleetName = "";
-            ships = null;
             numberOfShips = 0;
+            ships = new Ships();
             line = "";
             lostTheBattle = false;
-            ships = new Ships();
         }
 
         /**
@@ -172,10 +165,6 @@ namespace Ass1
             {
                 //get generated damage
                 int damage = ship.Damage.getDamage(rand);
-                
-                Console.WriteLine(fleetName + " name: "+ ship.Name+
-                    " shield Strength "+ ship.Shield.Shields + 
-                    " hull is "+ ship.Hull.HullStrength + " and damage is " + ship.Damage.toStrings());
 
                 // randomly selecting a ship to fire on
                 int count = targetShipList.Count;
@@ -214,7 +203,7 @@ namespace Ass1
                 }
             }
 
-            //update fleet ship with removing destroyed ships
+            //update fleet ships after removing destroyed ships
             ships = newShips;
         }
 

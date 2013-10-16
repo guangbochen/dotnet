@@ -18,11 +18,6 @@ namespace Ass1
             line = "";
         }
 
-        public string toStrings()
-        {
-            return "base : " + baseDamage + " random " + randomDamage;
-        }
-
         public void init(int baseD, int randomD)
         {
              this.baseDamage = baseD;
