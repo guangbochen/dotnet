@@ -1,8 +1,0 @@
-#2
-Dominion
-Attack Ship
-15
-Battle Cruiser
-7
-Galor
-10
