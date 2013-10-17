@@ -1,0 +1,9 @@
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\bin\Debug\Ass2.exe.config
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\bin\Debug\Ass2.exe
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\bin\Debug\Ass2.pdb
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\obj\Debug\Ass2.csprojResolveAssemblyReference.cache
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\obj\Debug\Ass2.Ass2Form.resources
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\obj\Debug\Ass2.Properties.Resources.resources
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\obj\Debug\Ass2.csproj.GenerateResource.Cache
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\obj\Debug\Ass2.exe
+C:\Users\Guangbo\Desktop\Ass2\Ass2\Ass2\obj\Debug\Ass2.pdb
