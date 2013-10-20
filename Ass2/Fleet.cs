@@ -40,17 +40,17 @@ namespace Ass2
         }
 
         /**
-         * this method checks the file version
+         * this method checks the file version and load the file if is new version
          **/
         private Boolean isNewFileVersion(string fleetFile)
         {
             StreamReader fin = new StreamReader(fleetFile);
             try
             {
-                String version = fin.ReadLine();
+                string version = fin.ReadLine();
                 if (version == null || version.Length == 0)
                     throw new Exception("Missing fleet name");
-                if (version.Equals("#2"))
+                if (validateFileName(version))
                 {
                     LoadFleetName(fin);
                     numberOfShips = ships.loadNewVersionShips(fin);
@@ -67,6 +67,8 @@ namespace Ass2
             }
             return false;
         }
+
+
 
         /**
          * this method validates the file is exist or not
@@ -117,6 +119,17 @@ namespace Ass2
             {
                 fin.Close();
             }
+        }
+
+        //this method validate file name contains characters #2
+        private Boolean validateFileName(string file)
+        {
+            if (file.Length > 1)
+            {
+                if (file[0].CompareTo('#') == 0 && file[1].CompareTo('2') == 0)
+                    return true;
+            }
+            return false;
         }
 
         /**
