@@ -25,15 +25,16 @@ namespace Ass2
             shieldStrength = maxShieldStrength = shield;
         }
 
+        //this method load ship shield strength 
         public void loadShield(StreamReader fin, string name)
         {
-            //load ship shield strength 
             string line = fin.ReadLine();
             if (!Int32.TryParse(line, out shieldStrength) || shieldStrength < 1)
                 throw new Exception("Invalid shield strength in ship class " + name);
             maxShieldStrength = shieldStrength;
         }
 
+        //this method use shield to absorb the damage and returns any remaining damage
         public int absorbDamage(int damage)
         {
             damageRemain = damage - shieldStrength;
@@ -47,9 +48,9 @@ namespace Ass2
             return 0;
         }
 
+        //this method regenerate the shield if the ship is not targeted in that round
         public void regenerateShield(int rate)
         {
-            //regenerate the shieldStrength if it is not targeted in that round
             if (isTarget == false)
             {
                 shieldStrength += rate;
@@ -57,7 +58,7 @@ namespace Ass2
                     shieldStrength = maxShieldStrength;
             }
 
-            //erase is target in each new round
+            //reset is not target in each new round
             isTarget = false;
         }
     }

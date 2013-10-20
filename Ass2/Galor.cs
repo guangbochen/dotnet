@@ -1,31 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Ass2
 {
-    public class AttackShip : BaseShip
+    public class Galor : BaseShip
     {
-        private string name;
+        private const string name = "Galor";
+        private const int rate = 1;
         private Shield shieldStrength;
-        private int rate;
         private Hull hullStrength;
         private Damage damage;
-
-        public AttackShip()
+        private enum ShipValue : int
         {
-            name = "Attack Ship";
-            rate = 1;
+            sShield = 80,
+            sHull = 7,
+            sBaseWeapon = 8,
+            sRandomWeapon = 3
+        }
+
+        public Galor()
+        {
             shieldStrength = new Shield();
             hullStrength = new Hull();
             damage = new Damage();
 
-            //initialize variables
-            shieldStrength.init(50);
-            hullStrength.init(8);
-            damage.init(6, 3);
+            //initialize ship variables
+            shieldStrength.init((int)ShipValue.sShield);
+            hullStrength.init((int)ShipValue.sHull);
+            damage.init((int)ShipValue.sBaseWeapon, (int)ShipValue.sRandomWeapon);
         }
         public override Damage Damage
         {
@@ -51,5 +55,6 @@ namespace Ass2
         {
             get { return rate; }
         }
+
     }
 }

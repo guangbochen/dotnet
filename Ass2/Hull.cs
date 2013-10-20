@@ -11,6 +11,7 @@ namespace Ass2
         private int hullStrength;
         private int maxHullStrength;
         private string line;
+        private const int percent = 100;
         private enum HullDamagePercent
         {
             VERY_HEAVY_DAMAGE = 0,
@@ -36,24 +37,25 @@ namespace Ass2
             line = "";
         }
 
+        //this method load the ship hull strength
         public void loadHullStre(StreamReader fin, string name)
         {
-            //load ship hull strength
             line = fin.ReadLine();
             if (!Int32.TryParse(line, out hullStrength) || hullStrength < 1)
                 throw new Exception("Invalid hull strength in ship class " + name);
             maxHullStrength = hullStrength;
         }
 
+        //this method takes damage and apply to the hull strength
         public void takeDamage(int damage)
         {
             hullStrength -= damage;
         }
 
+        //this method calculate and return the damage percent
         public string getDamageRating()
         {
-            //calculate and return damage percent
-            int undamagedPercent = (hullStrength) * 100 / maxHullStrength;
+            int undamagedPercent = (hullStrength) * percent / maxHullStrength;
             if (undamagedPercent == (int)HullDamagePercent.UNDAMAGED)
                 return "undamaged";
             if (undamagedPercent >= (int)HullDamagePercent.LIGHT_DAMAGE)

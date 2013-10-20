@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,7 +61,10 @@ namespace Ass2
             try
             {
                 //load fleet from files
+                if(file1.Equals("")) throw new Exception("No file entered for fleet 1");
                 Fleet fleet1 = new Fleet(file1);
+
+                if(file2.Equals("")) throw new Exception("No file entered for fleet 2");
                 Fleet fleet2 = new Fleet(file2);
 
                 //get random number generator
@@ -99,7 +101,13 @@ namespace Ass2
 
         public void addTextToResult(string text)
         {
-            txtOutput.Text += text + "\r\n";
+            txtOutput.AppendText(text + "\r\n");
+        }
+
+        private void txtOutput_TextChanged(object sender, EventArgs e) 
+        { 
+            txtOutput.SelectionStart = txtOutput.Text.Length;
+            txtOutput.ScrollToCaret();
         }
 
         private void txtFleet1_TextChanged(object sender, EventArgs e) { } 
@@ -107,12 +115,6 @@ namespace Ass2
         private void txtFleet2_TextChanged(object sender, EventArgs e) { }
 
         private void txtSeed_TextChanged(object sender, EventArgs e) { }
-
-        private void txtOutput_TextChanged(object sender, EventArgs e) 
-        { 
-            txtOutput.SelectionStart = txtOutput.Text.Length;
-            txtOutput.ScrollToCaret();
-        }
 
     }
 }

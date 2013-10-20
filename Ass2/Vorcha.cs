@@ -1,32 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Ass2
 {
-    class BattleCruiser : BaseShip
+    public class Vorcha : BaseShip
     {
-        private string name;
+        private const string name = "Vor'cha";
+        private const int rate = 1;
         private Shield shieldStrength;
-        private int rate;
         private Hull hullStrength;
         private Damage damage;
-
-        public BattleCruiser()
+        private enum ShipValue : int
         {
-            name = "Battle Cruiser";
-            rate = 2;
+            sShield = 90,
+            sHull = 20,
+            sBaseWeapon = 7,
+            sRandomWeapon = 5
+        }
+
+        public Vorcha()
+        {
             shieldStrength = new Shield();
             hullStrength = new Hull();
             damage = new Damage();
 
-            //initialize variables
-            shieldStrength.init(90);
-            hullStrength.init(25);
-            damage.init(13, 5);
+            //initialize ship variables
+            shieldStrength.init((int)ShipValue.sShield);
+            hullStrength.init((int)ShipValue.sHull);
+            damage.init((int)ShipValue.sBaseWeapon, (int)ShipValue.sRandomWeapon);
         }
+
         public override Damage Damage
         {
             get { return damage; }

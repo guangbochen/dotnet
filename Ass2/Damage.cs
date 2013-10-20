@@ -14,7 +14,7 @@ namespace Ass2
 
         public Damage()
         {
-            this.baseDamage = this.randomDamage = -1;
+            baseDamage = randomDamage = -1;
             line = "";
         }
 

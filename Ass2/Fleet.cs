@@ -31,7 +31,7 @@ namespace Ass2
         {
             initFleet();
 
-            //validate the file is exist
+            //validate the file is exist or not
             validateFile(fleetFile);
 
             //read the file version and load ships for the fleet
@@ -74,7 +74,7 @@ namespace Ass2
         private void validateFile(string fleetFile)
         {
             if (!File.Exists(fleetFile))
-                throw new Exception(fleetFile + " file not found");
+                throw new Exception(fleetFile + "\r does not exist");
             StreamReader fin = new StreamReader(fleetFile);
             if (fin == null) throw new Exception("Unable to open " + fleetFile);
 
@@ -93,7 +93,7 @@ namespace Ass2
         }
 
         /**
-         * this method loads the fleet and its ships from the input file
+         * this method loads the fleet and its ships from the old version file
          **/
         private void readAsOldVersion(string fleetFile)
         {
@@ -154,9 +154,8 @@ namespace Ass2
         }
 
         /**
-         * methods for game battle
+         * this method calls fleet ships to fire its weapon to the targe ships
          **/
-
         public void fireWeapon(Fleet targetFleet, Random rand)
         {
             Ships targetShips  = targetFleet.Ships;
@@ -178,6 +177,9 @@ namespace Ass2
         }
 
 
+        /**
+         * this method removes the destroyed ships
+         **/
         public void removeDestroyedShips(int round, Ass2Form form)
         {
             //make a copy of current fleet ships
@@ -205,6 +207,7 @@ namespace Ass2
             ships = newShips;
         }
 
+        //this method regenerates the ship shield strength
         public void regenerateShield()
         {
             foreach (BaseShip ship in ships.ShipList)
@@ -214,6 +217,7 @@ namespace Ass2
             }
         }
 
+        //this method validates fleet lost the battle or not
         public Boolean lostTheBattel() 
         {
             if(numberOfShips == 0 || ships.ShipList.Count == 0)

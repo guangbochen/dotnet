@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,24 +7,29 @@ namespace Ass2
 {
     public class Defiant : BaseShip
     {
-        private string name;
+        private const string name = "Defiant";
+        private const int rate = 3;
         private Shield shieldStrength;
-        private int rate;
         private Hull hullStrength;
         private Damage damage;
+        private enum ShipValue : int
+        {
+            sShield = 60,
+            sHull = 20,
+            sBaseWeapon = 7,
+            sRandomWeapon = 3
+        }
 
         public Defiant()
         {
-            name = "Defiant";
-            rate = 3;
             shieldStrength = new Shield();
             hullStrength = new Hull();
             damage = new Damage();
 
-            //initialize variables
-            shieldStrength.init(60);
-            hullStrength.init(20);
-            damage.init(7,3);
+            //initialize ship variables
+            shieldStrength.init((int)ShipValue.sShield);
+            hullStrength.init((int)ShipValue.sHull);
+            damage.init((int)ShipValue.sBaseWeapon, (int)ShipValue.sRandomWeapon);
         }
         public override Damage Damage
         {

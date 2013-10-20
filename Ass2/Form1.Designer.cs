@@ -54,7 +54,7 @@
             this.btnFleet2.Name = "btnFleet2";
             this.btnFleet2.Size = new System.Drawing.Size(75, 23);
             this.btnFleet2.TabIndex = 1;
-            this.btnFleet2.Text = "Fleet1";
+            this.btnFleet2.Text = "Fleet2";
             this.btnFleet2.UseVisualStyleBackColor = true;
             this.btnFleet2.Click += new System.EventHandler(this.btnFleet2_Click);
             // 

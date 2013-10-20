@@ -22,6 +22,9 @@ namespace Ass2
             get { return shipList; }
         }
 
+        /**
+         * this method load the new version of fleet file and returns the total count of ships
+         */
         public int loadNewVersionShips(StreamReader fin)
         {
             int totalCount = 0;;
@@ -42,6 +45,9 @@ namespace Ass2
             return totalCount;
         }
 
+        /**
+         * this method add derived ship class to the ship list
+         */
         private void addShipsToList(string shipName, int count)
         {
             for (int i = 0; i < count; i++)
@@ -60,6 +66,9 @@ namespace Ass2
             }
         }
 
+        /**
+         * this method load the old version of fleet file
+         */
         public void loadOldVersionShips(StreamReader fin, int numberOfShips)
         {
             for (int i = 0; i < numberOfShips; i++)
