@@ -1,1 +1,1 @@
-## .net ass 2
+## Battle Simulator in c# with .net Framework
